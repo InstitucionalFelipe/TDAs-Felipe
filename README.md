@@ -11,23 +11,20 @@ Y luego ejecutar:
 ./main
 ````
 
-## TDAs
-En la carpeta `tdas` se encuentran implementados distintos TDAs que puedes utilizar (lista, pila, cola, cola con prioridad y mapas). 
+## Como ejecutar el programa
 
-Las implementaciones no son las más eficientes (todas usan como estructura de datos una **lista enlazada**), por lo que puedes reemplazarlas por las que has realizado en los labs.
+A la hora de compilar el programa se le solicitara al ususario ingresar una de las siguientes opciones, las cuales deben ser ingresadas en formato numerico:
 
-## Otros códigos (en carpeta examples)
-Para ejecutar los distintos ejemplos que hay en la carpeta `examples`, primero debes compilarlos. Si estamos en la carpeta raíz:
-````
-gcc tdas/*.c examples/example2_menu.c -Wno-unused-result -o example
-````
-Y luego ejecutarlos:
-````
-./example
-````
+1) Registrar paciente: Encargado del registro adecuado de los pacientes, que solicitará el nombre, edad, síntomas y hora de ingreso del paciente. Asignará al paciente de forma automática a una prioridad BAJA.
+2) Asignar prioridad a paciente: Se le solicita al usuario ingresar el nombre del paciente, luego la prioridad actual y a la que se desea reasignar.
+3) Mostrar lista de espera: Mostrará a los pacientes, desde la prioridad alta a la baja.
+4) Atender al siguiente paciente: mostrará el paciente de mayor prioridad y lo eliminará, pues se considerará atendido.
+5) Mostrar pacientes por prioridad: muestra la lista de prioridad que se le solicitó.
+8) Salir: sale del programa.
 
-Se incluyen los siguientes ejemplos:
-* `example1_list`: Uso del TDA Lista, inserción y eliminación de elementos.
-* `example2_menu`: Ejemplo de menú con submenús.
-* `example3_readcsv`: Ejemplo de lectura desde un archivo csv y almacenamiento en datos estructurados.
-* `example4_map`: Ejemplo de uso del TDA mapa.
+## Posibles errores
+
+A pesar de que en algunos casos, si no se siguen correctamente las instrucciones, el programa será capaz de solicitar al usuario volver a ingresar un imput. Existen algunos que probablemente no haya previsto. Por esto, no seguir de forma adecuada los pasos puede llevar a errores.
+Por otro lado, ingresar dos pacientes del mismo nombre, hora y prioridad, puede llevar a confusiones a la hora de cambiar sus prioridades, pues no hay una forma real de mover a un paciente específico, pues el programa moverá al que encuentre primero. El error radica en que, si los pacientes tienen síntomas distintos, puede conllevar errores fatales.
+
+
